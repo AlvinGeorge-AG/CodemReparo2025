@@ -15,7 +15,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!title || amount) return;
-    
+
     await onAddTransaction(title, parseFloat(amount), type);
     setTitle('');
     setAmount('');
@@ -33,7 +33,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder-zinc-600 transition-all"
+            className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder-zinc-900 transition-all"
             placeholder="e.g. Grocery Shopping"
             required
           />
@@ -69,7 +69,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
                 
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-400">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-teal-600 hover:bg-teal-500 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center pointer-events-none gap-2 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+          className="w-full bg-teal-600 hover:bg-teal-500 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center  gap-2 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
         >
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />

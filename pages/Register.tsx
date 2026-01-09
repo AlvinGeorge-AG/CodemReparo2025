@@ -16,9 +16,14 @@ const Register: React.FC = () => {
     setLoading(true);
     setError(null);
     setSuccessMsg(null);
-    
+    if (!email.includes('.')) {
+      alert("Invalid Email");
+      setError("Invalid Email");
+      navigate('/login');
+      return;
+    }
     const { error } = await signUp(email, password);
-    
+
     if (error) {
       setError(error.message);
       setLoading(false);
@@ -62,7 +67,9 @@ const Register: React.FC = () => {
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value)
+              }}
               className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
               placeholder="you@example.com"
               required
@@ -85,7 +92,7 @@ const Register: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-1/12 bg-teal-600 hover:bg-teal-500 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-1/12 bg-teal-600 hover:bg-teal-500 text-white font-semibold py-1 px-20 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Creating Account...' : (
               <>
