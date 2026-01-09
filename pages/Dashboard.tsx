@@ -64,19 +64,19 @@ const Dashboard: React.FC<DashboardProps> = ({ session }) => {
         {/* Stats */}
         <DashboardStats transactions={transactions} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           {/* Form Section */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-3">
             <TransactionForm onAddTransaction={handleAddTransaction} isLoading={actionLoading} />
           </div>
 
           {/* List Section */}
-          <div className="lg:col-span-2 -ml-20">
+          <div className="lg:col-span-3 -ml-20">
             {loading ? (
               <div className="bg-zinc-800 rounded-xl p-12 flex justify-center border border-zinc-700/50">
                  <div className="animate-pulse flex flex-col items-center">
-                    <div className="h-4 w-32 bg-zinc-700 rounded mb-4"></div>
-                    <div className="h-4 w-48 bg-zinc-700 rounded"></div>
+                    {/* <div className="h-4 w-28 bg-zinc-700 rounded mb-4"></div> */}
+                    {/* <div className="h-4 w-48 bg-zinc-700 rounded"></div> */}
                  </div>
               </div>
             ) : (
