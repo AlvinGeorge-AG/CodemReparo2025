@@ -29,6 +29,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
         <div>
           <label className="block text-sm font-medium text-zinc-400 mb-1">Description</label>
           <input
+            id="description"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -42,6 +43,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Amount</label>
             <input
+            id="amount"
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
@@ -57,6 +59,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
             <label className="block text-sm font-medium text-zinc-400 mb-1">Type</label>
             <div className="relative">
               <select
+                id="expense"
                 value={'expense'}
                 onChange={(e) => setType(e.target.value as TransactionType)}
                 className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all cursor-pointer"
