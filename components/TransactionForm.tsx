@@ -27,7 +27,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
       <h2 className="text-lg font-semibold text-white mb-4">Add Transaction</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-zinc-400 mb-1">Description</label>
+          <label className="block text-sm font-medium text-zinc-400 mb-1" htmlFor="description">Description</label>
           <input
             id="description"
             type="text"
@@ -41,7 +41,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-zinc-400 mb-1">Amount</label>
+            <label className="block text-sm font-medium text-zinc-400 mb-1" htmlFor="amount">Amount</label>
             <input
             id="amount"
               type="number"
@@ -56,7 +56,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-zinc-400 mb-1">Type</label>
+            <label className="block text-sm font-medium text-zinc-400 mb-1" htmlFor="expense">Type</label>
             <div className="relative">
               <select
                 id="expense"
