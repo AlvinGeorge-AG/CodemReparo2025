@@ -59,13 +59,14 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ onAddTransaction, isL
             <label className="block text-sm font-medium text-zinc-400 mb-1" htmlFor="expense">Type</label>
             <div className="relative">
               <select
-                id="expense"
-                value={'expense'}
+                id="expense-type"
+                value={type}
                 onChange={(e) => setType(e.target.value as TransactionType)}
                 className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-2 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all cursor-pointer"
               >
-                <option value="expense">Expense</option>
                 <option value="income">Income</option>
+                <option value="expense">Expense</option>
+                
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-400">
                 <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>

@@ -10,7 +10,7 @@ interface TransactionListProps {
 const TransactionList: React.FC<TransactionListProps> = ({ transactions, onDelete }) => {
   if (transactions.length === 0) {
     return (
-      <div className="bg-zinc-800 rounded-xl p-8 text-center border border-zinc-700/50 h-full flex flex-col items-center justify-center">
+      <div className="bg-zinc-800 rounded-xl p-8 text-center border border-zinc-700/50 h-full flex flex-col items-center justify-center shadow-lgj">
         <div className="bg-zinc-700/50 p-4 rounded-full mb-4">
           <Calendar className="h-8 w-8 text-zinc-500" />
         </div>
