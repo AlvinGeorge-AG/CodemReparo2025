@@ -41,7 +41,7 @@ const DashboardStats: React.FC<DashboardStatsProps> = ({ transactions }) => {
           </div>
         </div>
         <p className="text-3xl font-bold text-green-400">
-          +₹{income.toFixed(2)}
+          ₹{income.toFixed(2)}
         </p>
       </div>
 
